@@ -367,7 +367,7 @@ function initDevisModal() {
             if (message) waText += `\n📝 *Détails du besoin* :\n${message}\n`;
             waText += `\nMerci de me recontacter !`;
 
-            const phone = '221768719352'; // Numéro WhatsApp officiel Link Energy
+            const phone = '221710487968'; // Numéro WhatsApp officiel Link Energy
             const url = `https://wa.me/${phone}?text=${encodeURIComponent(waText)}`;
             window.open(url, '_blank');
         });
