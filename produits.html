@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catalogue de produits et équipements LINK ENERGY : Panneaux solaires 550W, Pompes solaires submersibles inox, Contrôleurs MPPT LIKOU, Armoires électriques au Sénégal.">
+    <title>Nos Produits & Équipements — LINK ENERGY Sénégal</title>
+    <link rel="icon" type="image/jpeg" href="assets/images/logo.jpeg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolled" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo.jpeg" alt="Logo LINK ENERGY" class="brand-logo-img">
+                <div class="brand-info">
+                    <span class="brand-text">LINK <span class="text-accent">ENERGY</span></span>
+                    <span class="brand-tagline">Solutions Électriques & Solaires</span>
+                </div>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Menu de navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="produits.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="realisations.html">Réalisations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" class="btn btn-accent btn-sm px-4" data-bs-toggle="modal" data-bs-target="#devisModal">
+                            <i class="bi bi-file-earmark-text me-1"></i>Devis gratuit
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <div class="container">
+            <nav aria-label="Fil d'Ariane" class="breadcrumb-nav">
+                <a href="index.html">Accueil</a> <i class="bi bi-chevron-right"></i> <span>Produits & Équipements</span>
+            </nav>
+            <h1 class="page-title">Nos Produits & Équipements</h1>
+            <p class="page-desc">
+                Des équipements certifiés, robustes et à haut rendement énergétique pour vos installations solaires, agricoles et électriques au Sénégal.
+            </p>
+        </div>
+    </header>
+
+    <!-- SECTION CATALOGUE PRODUITS -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <!-- Filtres de catégorie -->
+            <div class="filters-bar fade-in" id="produitsFilters">
+                <button class="filter-btn active" data-filter="all">Tous les équipements</button>
+                <button class="filter-btn" data-filter="solaire">Panneaux Solaires</button>
+                <button class="filter-btn" data-filter="pompage">Pompes & Forages</button>
+                <button class="filter-btn" data-filter="controleurs">Contrôleurs & Coffrets</button>
+            </div>
+
+            <!-- Grille dynamique générée par js/main.js depuis SITE_DATA.produits -->
+            <div class="row g-4" id="produitsGrid">
+                <!-- Les produits s'injectent ici automatiquement -->
+            </div>
+
+            <!-- Bannière d'aide & assistance technique -->
+            <div class="mt-5 fade-in">
+                <div class="p-4 p-md-5 rounded-4 bg-white border shadow-sm">
+                    <div class="row align-items-center g-4">
+                        <div class="col-lg-8">
+                            <h4 class="fw-bold mb-2 text-navy">
+                                <i class="bi bi-patch-question-fill text-accent me-2"></i>Besoin de conseils pour dimensionner vos équipements ?
+                            </h4>
+                            <p class="text-muted mb-0">
+                                Nos ingénieurs évaluent gratuitement vos besoins en puissance, profondeur de forage, débit d'eau et autonomie pour vous recommander les équipements adaptés avec devis détaillé.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 text-lg-end">
+                            <button type="button" class="btn btn-accent btn-lg w-100 w-lg-auto" data-bs-toggle="modal" data-bs-target="#devisModal">
+                                <i class="bi bi-calculator me-1"></i>Demander un dimensionnement
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION ENGAGEMENTS QUALITÉ -->
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="text-center mb-5 fade-in">
+                <span class="section-tag">Garantie & Fiabilité</span>
+                <h2 class="section-title">Pourquoi acheter chez LINK ENERGY ?</h2>
+                <p class="section-desc mx-auto">
+                    Nous sélectionnons rigoureusement nos partenaires et constructeurs pour vous apporter un matériel fiable sous les températures et conditions climatiques du Sénégal.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="p-4 rounded-4 bg-light border text-center h-100">
+                        <div class="service-icon mx-auto mb-3">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h6 class="fw-bold mb-2">Matériel Certifié</h6>
+                        <p class="small text-muted mb-0">Composants testés conformes aux normes CE, IEC et garanties constructeur jusqu'à 25 ans.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="p-4 rounded-4 bg-light border text-center h-100">
+                        <div class="service-icon mx-auto mb-3">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <h6 class="fw-bold mb-2">Stock Disponible</h6>
+                        <p class="small text-muted mb-0">Disponibilité locale au Sénégal pour des livraisons et installations rapides sans attente prolongée.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="p-4 rounded-4 bg-light border text-center h-100">
+                        <div class="service-icon mx-auto mb-3">
+                            <i class="bi bi-tools"></i>
+                        </div>
+                        <h6 class="fw-bold mb-2">Installation Clé en Main</h6>
+                        <p class="small text-muted mb-0">Nos équipes techniques assurent la pose, le raccordement et la mise en service dans les règles de l'art.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 fade-in">
+                    <div class="p-4 rounded-4 bg-light border text-center h-100">
+                        <div class="service-icon mx-auto mb-3">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h6 class="fw-bold mb-2">SAV & Dépannage Réactif</h6>
+                        <p class="small text-muted mb-0">Pièces de rechange disponibles et assistance technique continue pour votre tranquillité.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANNIÈRE CTA BAS -->
+    <section class="section-padding bg-brand-gradient text-white text-center">
+        <div class="container fade-in">
+            <h2 class="section-title text-white mb-3">Un projet d'équipement solaire ou électrique ?</h2>
+            <p class="opacity-75 mb-4 mx-auto" style="max-width:560px;">
+                Recevez votre devis personnalisé gratuit sous 24h avec les fiches techniques complètes de votre matériel.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <button type="button" class="btn btn-accent btn-lg" data-bs-toggle="modal" data-bs-target="#devisModal">
+                    <i class="bi bi-file-earmark-text me-2"></i>Demander un devis gratuit
+                </button>
+                <a href="https://wa.me/221768719352?text=Bonjour%20LINK%20ENERGY,%20je%20souhaite%20des%20informations%20sur%20vos%20produits" 
+                   target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i>Échanger sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <a class="navbar-brand d-flex align-items-center gap-2 mb-3" href="index.html">
+                        <img src="assets/images/logo.jpeg" alt="Logo LINK ENERGY" class="brand-logo-img">
+                        <div class="brand-info">
+                            <span class="brand-text text-white">LINK <span class="text-accent">ENERGY</span></span>
+                            <span class="brand-tagline">Travaux Électriques & Solaire</span>
+                        </div>
+                    </a>
+                    <p class="footer-desc">
+                        Entreprise experte au Sénégal : Étude, Réalisation, Équipements de pointe et Dépannage en électricité et solaire photovoltaïque.
+                    </p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h6 class="footer-title">Navigation</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="realisations.html">Réalisations</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <h6 class="footer-title">Nos Équipements</h6>
+                    <ul class="footer-links">
+                        <li><a href="produits.html#prod-panneau-550w">Panneaux Solaires 550W</a></li>
+                        <li><a href="produits.html#prod-pompe-submersible">Pompes Submersibles Inox</a></li>
+                        <li><a href="produits.html#prod-controleur-likou">Contrôleurs MPPT LIKOU</a></li>
+                        <li><a href="produits.html#prod-pompe-surface">Pompes Solaires de Surface</a></li>
+                        <li><a href="produits.html#prod-armoire-coffret">Armoires & Coffrets Legrand</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="footer-title">Contact Direct</h6>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-telephone-fill"></i> +221 76 871 93 52</li>
+                        <li><i class="bi bi-whatsapp"></i> +221 76 871 93 52</li>
+                        <li><i class="bi bi-envelope-fill"></i> linkenergysenegal@gmail.com</li>
+                        <li><i class="bi bi-geo-alt-fill"></i> Sénégal</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+                <p class="mb-0">&copy; 2026 LINK ENERGY. Tous droits réservés.</p>
+                <p class="mb-0 small text-muted">Étude, Réalisation, Fourniture et Dépannage</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODALE PROPRE ET DÉDIÉE : DEVIS GRATUIT -->
+    <div class="modal fade" id="devisModal" tabindex="-1" aria-labelledby="devisModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+            <div class="modal-content devis-modal">
+                <div class="modal-header devis-modal-header d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center gap-3 modal-header-content">
+                        <img src="assets/images/logo.jpeg" alt="Logo LINK ENERGY" class="devis-modal-logo">
+                        <div>
+                            <h5 class="devis-modal-title" id="devisModalLabel">
+                                Demande de Devis Gratuit
+                            </h5>
+                            <p class="devis-modal-subtitle mb-0">Recevez votre étude chiffrée et personnalisée sous 24h.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                </div>
+                <div class="modal-body devis-modal-body">
+                    <form id="devisForm" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="devisNom" class="form-label">Nom complet <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="devisNom" placeholder="Ex: Moussa Diop" required>
+                                <div class="invalid-feedback">Veuillez renseigner votre nom.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="devisTelephone" class="form-label">Téléphone / WhatsApp <span class="text-danger">*</span></label>
+                                <input type="tel" class="form-control" id="devisTelephone" placeholder="+221 7X XXX XX XX" required>
+                                <div class="invalid-feedback">Veuillez renseigner votre numéro de téléphone.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="devisEmail" class="form-label">Adresse Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="devisEmail" placeholder="votre@email.com" required>
+                                <div class="invalid-feedback">Veuillez renseigner un email valide.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="devisClient" class="form-label">Vous êtes :</label>
+                                <select class="form-select" id="devisClient">
+                                    <option value="particulier">Particulier (Maison, Résidence)</option>
+                                    <option value="agriculteur">Agriculteur / Éleveur / Coopérative</option>
+                                    <option value="entreprise">Entreprise / PME / Industrie</option>
+                                    <option value="collectivite">Collectivité / Commune / ONG</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="devisType" class="form-label">Type de projet <span class="text-danger">*</span></label>
+                                <select class="form-select" id="devisType" required>
+                                    <option value="solaire">Installation Solaire Photovoltaïque</option>
+                                    <option value="pompage">Pompage Solaire & Forage</option>
+                                    <option value="electricite">Électricité Générale & Armoires</option>
+                                    <option value="materiel">Achat d'équipements & Matériel</option>
+                                    <option value="maintenance">Maintenance / SAV / Dépannage</option>
+                                    <option value="autre">Autre projet spécifique</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="devisEquipement" class="form-label">Équipement souhaité (facultatif)</label>
+                                <input type="text" class="form-control" id="devisEquipement" placeholder="Ex: Panneau 550W, Pompe inox...">
+                            </div>
+                            <div class="col-12">
+                                <label for="devisLocalisation" class="form-label">Localisation du projet au Sénégal</label>
+                                <input type="text" class="form-control" id="devisLocalisation" placeholder="Ex: Dakar, Thiès, Kaolack, Saint-Louis, Casamance...">
+                            </div>
+                            <div class="col-12">
+                                <label for="devisMessage" class="form-label">Description détaillée de votre besoin <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="devisMessage" rows="4" placeholder="Décrivez votre besoin (surface disponible, profondeur de puits, puissance, consommation actuelle...)" required></textarea>
+                                <div class="invalid-feedback">Veuillez décrire brièvement votre besoin.</div>
+                            </div>
+                            <div class="col-12">
+                                <div class="devis-modal-actions">
+                                    <button type="submit" class="btn btn-accent btn-lg w-100">
+                                        <i class="bi bi-send me-2"></i>Envoyer la demande de devis
+                                    </button>
+                                    <button type="button" class="btn devis-whatsapp-btn w-100" id="devisWhatsAppBtn">
+                                        <i class="bi bi-whatsapp me-2"></i>Envoyer directement sur WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-success d-none mt-3" id="devisFormSuccess">
+                            <i class="bi bi-check-circle-fill fs-4 flex-shrink-0"></i>
+                            <div>
+                                <strong>Demande de devis transmise avec succès !</strong>
+                                <p class="mb-0 small">Notre équipe technique prend contact avec vous sous 24 heures.</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOUTON RETOUR EN HAUT -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut de page"><i class="bi bi-arrow-up"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
